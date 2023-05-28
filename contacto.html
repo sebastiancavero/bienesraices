@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENES RAÍCES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container contenido-header">
+            <div class="bar">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="BIENES RAÍCES">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="Icono Menú">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navigation">
+                    <a href="nosotros.html">Nosotros</a>
+                    <!--el atributo target target="_blank" es para que te abra otra ventana-->
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html"> Blog</a>
+                    <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+
+    </header>
+
+    <h1 class="fw-300 center-text">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen Principal.">
+    <main class="container section contenido-center">
+        <h2 class="fw-300 center-text">Llenar Formulario de Contacto</h2>
+
+        <form action="">
+            <fieldset>
+                <legend class="fw-700">Información Personal.</legend>
+                <label for="nombre">Nombre:</label><input type="text" id="nombre" placeholder="Nombre" required>
+                <label for="email">E-mail</label><input type="email" id="email" placeholder="Email" required>
+                <label for="telefono">Teléfono</label><input type="tel" id="telefono" placeholder="Teléfono" requires>
+                <label for="mensaje">Mensaje</label><textarea id="mensaje"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend class="fw-700">Información sobre Propiedad.</legend>
+                <label for="opciones">Vende o Compra</label>
+                <select id="opciones">
+                    <option value="" disabled selected>--Seleccione--</option>
+                    <option value="purchase">Compra</option>
+                    <option value="sale">Vende</option>
+                </select>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="amount" placeholder="Cantidad" required min="0">
+            </fieldset>
+            <fieldset class="contacto">
+                <legend class="fw-700">Contacto</legend>
+
+                <p>¿Cómo desea ser contactado?</p>
+                <div class="forma-contact">
+                    <label for="telef">Teléfono</label>
+                    <input type="radio" name="contacto" value="telef" id="telef">
+
+                    <label for="correo">Email</label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
+                <p>Si eligió teléfono, elija la fecha y hora</p>
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" min="9:00" max="18:00">
+            </fieldset>
+            <input type="submit" value="Enviar" class="button greenbutton">
+        </form>
+    </main>
+
+    <footer class="site-footer section">
+        <div class="container container-footer">
+            <nav class="navigation">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html"> Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los Derechos Reservados 2022 &REG</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

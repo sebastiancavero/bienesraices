@@ -1,0 +1,537 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*Es un "reset" para REMS. 62.5% = 10px de 16px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: calc(100% - 5rem);
+    max-width: 120rem;
+    /*le aplica un ancho máxico de 1200px*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.contenido-center {
+    max-width: 800px;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+
+/**BUTTONS**/
+
+.button {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    justify-content: center;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .button {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.yellowbutton {
+    background-color: #E08709;
+}
+
+.greenbutton {
+    background-color: #71B100;
+}
+
+
+/*HEADER*/
+
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.beginning {
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    /*posiciona la imagen justo al centro*/
+    background-size: cover;
+    /*toma toda la imagen y la muestra guardando las proporciones*/
+    height: 100vh;
+    /*le indica que se desea que muestre el fondo al 100% del viewport(pantalla)*/
+    min-height: 60rem;
+    /*le indica que al menos no baje de 600px de tamaño*/
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*Direcciona de arriba hacia abajo*/
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+}
+
+.contenido-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+}
+
+@media (min-width: 768px) {
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.bar {
+    padding-top: 3rem;
+}
+
+.navigation a {
+    color: #ffffff;
+    font-size: 2.2rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navigation a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .navigation a:last-of-type {
+        margin-right: 0rem;
+    }
+}
+
+.navigation a:hover {
+    color: yellow;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    margin: 1rem auto;
+    width: 5rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.navigation:target {
+    display: block;
+}
+
+.navigation {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .icons-us {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.icon {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icon {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.icon h3 {
+    text-transform: uppercase;
+}
+
+
+/**ANUNCIOS**/
+
+@media (min-width: 768px) {
+    .container-anuncios {
+        display: flex;
+        justify-content: space-between;
+        /* Flex-wrap verifica si hay más elementos fuera de pantalla y los acomoda dentro. */
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .anuncio {
+        /* orden de flex: grow-shrink-basis */
+        flex: 0 0 calc(33.3% - 1rem);
+        /* Flex-Shrink respeta el tamaño de la base (flex basis), y lo acomoda todo. */
+    }
+}
+
+.anuncio {
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+}
+
+.price {
+    color: #71B100;
+    font-weight: 700;
+}
+
+.icons-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 50rem;
+    flex: 1;
+}
+
+.icons-caracteristicas li {
+    /* flex:1; */
+    display: flex;
+}
+
+.icons-caracteristicas img {
+    margin-right: 2rem;
+}
+
+.see-all {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/**CONTACTO HOME**/
+
+.image-contact {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 0 0 95%;
+    /**Detecta tamaño y elementos, y agranda el elemento.**/
+    color: white;
+    ;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
+
+/* Sección inferior */
+
+@media (min-width: 768px) {
+    .section-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .section-inferior .blog {
+        flex-basis: 60%;
+    }
+    .section-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+.entrada-blog:last-of-type {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+    }
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+.entrada-blog .image {
+    flex-basis: 40%;
+}
+
+.entrada-blog .text-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.text-entrada h4 {
+    margin: 0;
+    line-height: 1.3;
+}
+
+.text-entrada h4::after {
+    /*Crea un elemento luego del especificado. */
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.text-entrada span {
+    color: #E08709;
+}
+
+
+/* TESTIMONIALES */
+
+.testimonial {
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.container-footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container-footer {
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+
+/* OPCIONAL */
+
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
+}
+
+
+/* OPCIONAL */
+
+.copyright {
+    margin: 0;
+    color: white;
+}
+
+
+/* Páginas Internas. */
+
+@media (min-width: 768px) {
+    .contenido-us {
+        /* CSS GRID nos da más control que flexbox */
+        display: grid;
+        /* Divide la pantalla en el número de columnas y por tamaño */
+        grid-template-columns: 50% 50%;
+        /* Establece una separación entre los elementos */
+        grid-column-gap: 2rem;
+    }
+}
+
+.text-us blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 0 3rem 0;
+}
+
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* CONTACTO */
+
+.contacto p {
+    color: #4f4f4f;
+    margin: 5rem 0 0 0;
+}
+
+.contacto p:first-of-type {
+    margin: 0;
+}
+
+legend {
+    font-size: 2.4rem;
+}
+
+label {
+    display: block;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    width: 100%;
+    background-color: #e1e1e1;
+    display: block;
+    border: none;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-bottom: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 20rem;
+}
+
+.forma-contact {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
